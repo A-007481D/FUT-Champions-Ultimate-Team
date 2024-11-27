@@ -1,11 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FUT | Build Your Team</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>FUT | Build Your Team</title>
 </head>
-<body>
-   
+
+<body class="bg-cover bg-no-repeat" style="background-image: url('/src/img/untitled.jpg');">
+
+  <header>
+    <h1 class="text-center text-3xl text-white py-4">Build your Ultimate Dream Team</h1>
+  </header>
+
+  <main class="flex flex-col items-center lg:flex-row justify-around">
+    <!-- terrain -->
+    <div class="w-[58rem] h-[40rem] bg-cover bg-center rounded-lg overflow-hidden"
+      style="background-image: url('https://www.futbin.com/design2/img/static/field-bg.svg');">
+
+      <!-- cards -->
+      <div class="flex flex-col items-center gap-6 p-6 w-full min-h-screen">
+
+        <!-- attack -->
+        <div class="flex justify-center gap-16">
+          <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+            style="background-image: url('/src/img/placeholder-card-normal.webp'); ">
+            LW
+            <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+              
+            </div>
+          </div>
+          <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+            style="background-image: url('/src/img/placeholder-card-normal.webp');">
+            ST
+            <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+              
+            </div>
+          </div>
+          <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+            style="background-image: url('/src/img/placeholder-card-normal.webp');">
+            RW
+            <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- center -->
+        <div class="flex justify-center gap-32">
+          <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+            style="background-image: url('/src/img/placeholder-card-normal.webp');">
+            LM
+            <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+              
+            </div>
+          </div>
+          <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+            style="background-image: url('/src/img/placeholder-card-normal.webp'); margin-top: 2rem;">
+            CM
+            <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+              
+            </div>
+          </div>
+          <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+            style="background-image: url('/src/img/placeholder-card-normal.webp');">
+            RM
+            <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- defenders -->
+        <div class="flex justify-center gap-14">
+          <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+            style="background-image: url('/src/img/placeholder-card-normal.webp'); margin-top: 0rem;">
+            LB
+            <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+              
+            </div>
+          </div>
+          <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+            style="background-image: url('/src/img/placeholder-card-normal.webp'); margin-top: 1rem;">
+            CB
+            <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+              
+            </div>
+          </div> 
+            <!-- goalkeeper -->
+          <div class="flex justify-center">
+            <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+              style="background-image: url('/src/img/placeholder-card-normal.webp'); margin-top: 3rem;">
+              GK
+              <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+                
+              </div>
+            </div>
+          </div>
+          <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+            style="background-image: url('/src/img/placeholder-card-normal.webp'); margin-top: 1rem;">
+            CB
+            <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+              
+            </div>
+          </div>
+          <div class="relative w-[7rem] h-[10rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg"
+            style="background-image: url('/src/img/placeholder-card-normal.webp'); margin-top: 0rem;">
+            RB
+            <div class="absolute w-10 rounded bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
