@@ -142,10 +142,10 @@
       </div>
     </div>
 
-    <!-- control panel -->
+    <!-- control panel-->
     <div class="bg-[#1f1f1f] w-full lg:w-[20rem] rounded p-4 mt-4 lg:mt-0 lg:ml-6">
       <h1 class="text-white font-semibold mb-2 text-lg">Create your squad</h1>
-      <button class="text-white bg-blue-500 rounded p-2 mb-3">Add Player</button>
+      <button  class="text-white bg-blue-500 rounded p-2 mb-3">Add Player</button>
       <label class="text-white block mb-2" for="formation">Formation</label>
       <select
         class="formation bg-[#2b2a2a] text-white w-full rounded border-2 border-[#696969] text-sm p-2 cursor-pointer hover:bg-[#404040]">
@@ -154,9 +154,116 @@
       </select>
     </div>
 
- 
+    <!-- add player modal -->
+<div id="AddPlayer-modal" class="fixed inset-0 rounded bg-black/50  ">
+  <div class="bg-green-200 p-6 rounded-lg shadow-lg w-[90%] max-w-lg">
+    <h2 class="text-lg font-bold mb-4">Add a New Player</h2>
+
+    <div class="flex space-x-4 mb-4">
+      <div class="flex-1">
+        <label class="ml-1 text-sm font-semibold">Player Name</label>
+        <input id="PlayerName" class="rounded-lg px-3 py-2 w-full" type="text"
+          placeholder="player name">
+      </div>
+      <div class="flex-1">
+        <label class="ml-1 text-sm font-semibold">Position</label>
+        <select id="taskStatus" class="rounded-md px-3 py-2 w-full">
+          <option value="">Select Position</option>
+          <option value="GK">GK</option>
+          <option value="CB">CB</option>
+          <option value="LB">LB</option>
+          <option value="RB">RB</option>
+          <option value="CM">CM</option>
+          <option value="RM">RM</option>
+          <option value="LM">LM</option>
+          <option value="ST">ST</option>
+          <option value="RW">RW</option>
+          <option value="LW">LW</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div>
+        <label class="ml-1 text-sm font-semibold">Rating</label>
+        <input id="PlayerRating" class="rounded-lg px-2 py-1 w-full text-sm" 
+          type="number" placeholder="Rating">
+      </div>
+      <div>
+        <label class="ml-1 text-sm font-semibold">PAC</label>
+        <input id="PAC" class="rounded-lg px-2 py-1 w-full text-sm" 
+          type="number" placeholder="PAC">
+      </div>
+      <div>
+        <label class="ml-1 text-sm font-semibold">SHO</label>
+        <input id="SHO" class="rounded-lg px-2 py-1 w-full text-sm" 
+          type="number" placeholder="SHO">
+      </div>
+      <div>
+        <label class="ml-1 text-sm font-semibold">PAS</label>
+        <input id="PAS" class="rounded-lg px-2 py-1 w-full text-sm" 
+          type="number" placeholder="PAS">
+      </div>
+      <div>
+        <label class="ml-1 text-sm font-semibold">DRI</label>
+        <input id="DRI" class="rounded-lg px-2 py-1 w-full text-sm" 
+          type="number" placeholder="DRI">
+      </div>
+      <div>
+        <label class="ml-1 text-sm font-semibold">DEF</label>
+        <input id="DEF" class="rounded-lg px-2 py-1 w-full text-sm" 
+          type="number" placeholder="DEF">
+      </div>
+      <div>
+        <label class="ml-1 text-sm font-semibold">PHY</label>
+        <input id="PHY" class="rounded-lg px-2 py-1 w-full text-sm" 
+          type="number" placeholder="PHY">
+      </div>
+    </div>
+
+    <div class="flex space-x-4 mt-4">
+      <div class="flex-1">
+        <label class="ml-1 text-sm font-semibold">Nationality</label> <br>
+        <select id="ClubSelect" class="rounded-lg px-2 py-1 text-sm">
+          <option value="">Morocco</option>
+          <option value="">Spain</option>
+          <option value="">England</option>
+          <option value="">Argentina</option>
+          <option value="">France</option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        
+      </div>
+      <div class="flex-1">
+        <label class="ml-1 text-sm font-semibold">Club</label><br>
+        <select id="ClubSelect" class="rounded-lg px-2 py-1 text-sm">
+        <option value="">Real Madrid</option>
+        <option value="">Valencia</option>
+        <option value="">Barcelona</option>
+        <option value="">In. Miami</option>
+        <option value="">AC Milan</option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+          
+      </div>
+    </div>
+    <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg">
+    Submit
+    </button>
+  </div>
+</div>
+
 
   </main>
+
 
   <script src="script.js"></script>
 </body>
