@@ -24,7 +24,8 @@
         <!-- attack -->
         <div class="flex justify-center gap-16">
           <div class="relative w-[10rem] h-[13rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg 
-          bg-[url('/src/img/badge_gold.webp')]">
+          bg-[url('/src/img/badge_gold.webp')]"
+            >
             <!-- LW
             <div class="absolute w-10 bg-green-500 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
               <span class="text-white text-3xl font-bold">+</span>
@@ -39,7 +40,6 @@
               <span class="text-white text-3xl font-bold">+</span>
             </div> -->
             
-
           </div>
           <div class="relative w-[10rem] h-[13rem] bg-cover bg-center flex items-center justify-center text-white text-lg font-bold rounded-lg 
           bg-[url('/src/img/badge_gold.webp')]"
@@ -142,23 +142,22 @@
       </div>
     </div>
 
-    <!-- control panel-->
-    <div class="bg-[#1f1f1f] w-full lg:w-[20rem] rounded p-4 mt-4 lg:mt-0 lg:ml-6">
+   
+     <!-- control panel-->
+     <div class="bg-[#1f1f1f] w-full lg:w-[20rem] rounded p-4 mt-4 lg:mt-0 lg:ml-6">
       <h1 class="text-white font-semibold mb-2 text-lg">Create your squad</h1>
-      <button  class="text-white bg-blue-500 rounded p-2 mb-3">Add Player</button>
+      <button onclick="openAddPM()"  class="text-white bg-blue-500 rounded p-2 mb-3">Add Player</button>
       <label class="text-white block mb-2" for="formation">Formation</label>
       <select
         class="formation bg-[#2b2a2a] text-white w-full rounded border-2 border-[#696969] text-sm p-2 cursor-pointer hover:bg-[#404040]">
         <option value="">4-3-3</option>
-
       </select>
     </div>
 
     <!-- add player modal -->
-<div id="AddPlayer-modal" class="fixed inset-0 rounded bg-black/50  ">
+  <div id="AddPlayer-modal" class="fixed inset-0 rounded bg-black/50  ">
   <div class="bg-green-200 p-6 rounded-lg shadow-lg w-[90%] max-w-lg">
     <h2 class="text-lg font-bold mb-4">Add a New Player</h2>
-
     <div class="flex space-x-4 mb-4">
       <div class="flex-1">
         <label class="ml-1 text-sm font-semibold">Player Name</label>
@@ -182,7 +181,6 @@
         </select>
       </div>
     </div>
-
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
       <div>
         <label class="ml-1 text-sm font-semibold">Rating</label>
@@ -220,7 +218,6 @@
           type="number" placeholder="PHY">
       </div>
     </div>
-
     <div class="flex space-x-4 mt-4">
       <div class="flex-1">
         <label class="ml-1 text-sm font-semibold">Nationality</label> <br>
@@ -255,12 +252,11 @@
           
       </div>
     </div>
-    <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg">
+    <button onclick="closeAddModal()" class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg">
     Submit
     </button>
   </div>
 </div>
-
 
   </main>
 
