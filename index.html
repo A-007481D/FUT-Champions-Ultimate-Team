@@ -273,7 +273,7 @@
           </div>
         </div>
 
-        <div id="player-stats" class="grid grid-cols-2 sm:grid-cols-4 gap-4 hidden">
+        <div id="playerstats" class="grid grid-cols-2 sm:grid-cols-4 gap-4 hidden">
           <div>
             <label class="ml-1 text-sm font-semibold">Rating</label>
             <input id="playerRating" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
@@ -309,57 +309,58 @@
             <input id="playerPHY" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
               type="number" placeholder="PHY">
           </div>
+        </div>
 
-          <div id="GK-stats" class="grid grid-cols-2 sm:grid-cols-4 gap-4 hidden">
 
-            <div>
-              <label class="ml-1 text-sm font-semibold">Rating</label>
-              <input id="playerRating" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
-                type="number" placeholder="Rating">
-            </div>
-            <div>
-              <label class="ml-1 text-sm font-semibold">DIV</label>
-              <input id="playerPAC" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
-                type="number" placeholder="PAC">
-            </div>
-            <div>
-              <label class="ml-1 text-sm font-semibold">HAN</label>
-              <input id="playerSHO" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
-                type="number" placeholder="SHO">
-            </div>
-            <div>
-              <label class="ml-1 text-sm font-semibold">KIC</label>
-              <input id="playerPAS" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
-                type="number" placeholder="PAS">
-            </div>
-            <div>
-              <label class="ml-1 text-sm font-semibold">REF</label>
-              <input id="playerDRI" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
-                type="number" placeholder="DRI">
-            </div>
-            <div>
-              <label class="ml-1 text-sm font-semibold">SPE</label>
-              <input id="playerDEF" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
-                type="number" placeholder="DEF">
-            </div>
-            <div>
-              <label class="ml-1 text-sm font-semibold">POS</label>
-              <input id="playerPHY" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
-                type="number" placeholder="PHY">
-            </div>
+        <div id="GKstats" class="grid grid-cols-2 sm:grid-cols-4 gap-4 hidden">
+
+          <div>
+            <label class="ml-1 text-sm font-semibold">Rating</label>
+            <input id="playerRating" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="Rating">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">DIV</label>
+            <input id="playerPAC" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="PAC">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">HAN</label>
+            <input id="playerSHO" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="SHO">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">PAS</label>
+            <input id="playerPAS" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="PAS">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">DRI</label>
+            <input id="playerDRI" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="DRI">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">DEF</label>
+            <input id="playerDEF" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="DEF">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">PHY</label>
+            <input id="playerPHY" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="PHY">
           </div>
         </div>
 
         <div class="flex space-x-4 mt-4">
           <div class="flex-1">
             <label class="ml-1 text-sm font-semibold">Nationality</label> <br>
-            <!-- <select id="playerNationality" class="rounded-lg px-2 py-1 text-sm">
+            <select id="playerNationality" class="rounded-lg px-2 py-1 text-sm">
           <option value="Morocco">Morocco</option>
           <option value="Spain">Spain</option>
           <option value="England">England</option>
           <option value="Argentina">Argentina</option>
           <option value="France">France</option>
-        </select> -->
+        </select>
 
           </div>
           <div class="flex-1">
@@ -399,7 +400,7 @@
 
 
 
-  <script src="script.js"></script>
+  <script src="src/script.js"></script>
 </body>
 
 </html>

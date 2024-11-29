@@ -1,3 +1,4 @@
+
 let playerArray = [
   {
     "name": "Abdelmalek Labid",
@@ -94,14 +95,16 @@ let playerDRI = document.getElementById('playerDRI');
 let playerDEF = document.getElementById('playerDEF');
 let playerPHY = document.getElementById('playerPHY');
 
-const playerStats = document.getElementById("player-stats");
-const GKStats = document.getElementById("GK-stats");
+
+
+const playerStats = document.getElementById("playerstats");
+const GKStats = document.getElementById("GKstats");
 
 
 playerPosition.addEventListener('change', function () {
   if (this.value === 'GK') {
-      GKStats.classList.remove('hidden');
       playerStats.classList.add('hidden');
+      GKStats.classList.remove('hidden');
   } else {
       GKStats.classList.add('hidden');
       playerStats.classList.remove('hidden');
@@ -243,7 +246,7 @@ function playerListRender() {
                   <span class="font-bold text-[0.65rem]">${player.pace}</span>
                 </div>
                 <div class="flex flex-col gap-0 justify-center items-center">
-                  <span class="player-HANDLING text-[0.46rem] font-medium mb-[-1rem]">SHO</span>
+                  <span class="playe-SHO text-[0.46rem] font-medium mb-[-1rem]">SHO</span>
                   <span class="font-bold text-[0.65rem]">${player.shooting}</span>
                 </div>
                 <div class="flex flex-col gap-0 justify-center items-center">
@@ -275,8 +278,7 @@ function playerListRender() {
       
     
     playerListModal.appendChild(playerCardContainer);
+    
   });
 
 };
-
-
