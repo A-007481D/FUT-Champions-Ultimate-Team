@@ -94,6 +94,22 @@ let playerDRI = document.getElementById('playerDRI');
 let playerDEF = document.getElementById('playerDEF');
 let playerPHY = document.getElementById('playerPHY');
 
+const playerStats = document.getElementById("player-stats");
+const GKStats = document.getElementById("GK-stats");
+
+
+playerPosition.addEventListener('change', function () {
+  if (this.value === 'GK') {
+      GKStats.classList.remove('hidden');
+      playerStats.classList.add('hidden');
+  } else {
+      GKStats.classList.add('hidden');
+      playerStats.classList.remove('hidden');
+  }
+});
+
+
+
 function openAddPM() {
   const addModal = document.getElementById("AddPlayer-modal");
   addModal.style.display = "flex";
@@ -163,6 +179,7 @@ function playerListRender() {
   playerArray.forEach(player => {
     const playerCardContainer = document.createElement("div");
     playerCardContainer.classList = "cursor-pointer";
+    
     if(playerPosition == 'GK') {
       playerCardContainer.innerHTML = `<div class="flex justify-center mt-[0.6rem]">
               <div class="flex flex-col mr-[-9px] mt-[0.7rem] text-white ">
@@ -247,7 +264,7 @@ function playerListRender() {
                 </div>
               </div>
               <div class="flex justify-center items-center w-3 mt-[-0.4rem] gap-2">
-                <img class="${player.nationality}" src="/src/img/argentina.webp" alt="">
+                <img class="https://www.countryflags.com/wp-content/uploads/${player.nationality}-flag-png-large.png" src="/src/img/argentina.webp" alt="">
                 <img class="player-club" src="${player.club}" alt="">
               </div>
             </div>
