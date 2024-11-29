@@ -228,7 +228,7 @@ function playerListRender() {
     } else {
       playerCardContainer.innerHTML = `
       <div class="relative w-[8.5rem] h-[13rem] bg-cover bg-center flex flex-col items-center justify-center text-white text-lg font-bold rounded-lg hover:scale-105 transition duration-200 cursor-pointer
-          bg-[url('/src/img/badge-storyline.png')]"
+          bg-[url('./src/img/badge-storyline.png')]"
             >
       <div class="flex justify-center mt-[0.6rem]">
               <div class="flex flex-col mr-[-9px] mt-[0.7rem] text-white ">
