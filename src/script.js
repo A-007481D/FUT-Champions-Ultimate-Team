@@ -95,6 +95,14 @@ let playerDRI = document.getElementById('playerDRI');
 let playerDEF = document.getElementById('playerDEF');
 let playerPHY = document.getElementById('playerPHY');
 
+let playerDIVING = document.getElementById('player-DIVING');
+let playerHANDLING = document.getElementById('player-HANDLING');
+let playerKICKING = document.getElementById('player-KICKING');
+let playerREFLEXES = document.getElementById('player-REFLEXES');
+let playerSPEED = document.getElementById('player-SPEED');
+let playerPOSITIONING = document.getElementById('player-POSITIONING');
+
+
 
 
 const playerStats = document.getElementById("playerstats");
@@ -133,6 +141,13 @@ function closeAddModal() {
   playerDRI.value ="";
   playerDEF.value ="";
   playerPHY.value ="";
+  
+  playerDIVING.value = "";
+  playerHANDLING.value ="";
+  playerKICKING.value ="";
+  playerREFLEXES.valkue ="";
+  playerSPEED.value ="";
+  playerPOSITIONING.value ="";
 };
 
 function openPlayerModal(position) {
@@ -153,20 +168,45 @@ function closeModal() {
 const addPlayer = document.getElementById("add-player");
 
 addPlayer.onclick = function () {
+//   if (!player.name || !player.position || !player.rating) {
+//     alert("Please fill in all required fields.");
+//     return;
+// }
 
-  const player = {
-    name: playerName.value,
-    position: playerPosition.value,
-    nationality: playerNationality.value,
-    club: playerClub.value,
-    rating: playerRating.value,
-    pace: playerPAC.value,
-    shooting: playerSHO.value,
-    passing: playerPAS.value,
-    dribbling: playerDRI.value,
-    defending: playerDEF.value,
-    physical: playerPHY.value
-  };
+  let player;
+  if(playerPosition === 'GK') {
+    player = {
+      name: playerName.value,
+      position: playerPosition.value,
+      nationality: playerNationality.value,
+      club: playerClub.value,
+      rating: playerRating.value,
+      diving: playerDIVING.value,
+      handling: playerHANDLING.value,
+      kicking: playerKICKING.value ,
+      reflexes: playerReflexes.value,
+      speed: playerSPEED.value,
+      positioning: playerPOSITIONING.value 
+    };
+
+  } else {
+    player = {
+      name: playerName.value,
+      position: playerPosition.value,
+      nationality: playerNationality.value,
+      club: playerClub.value,
+      rating: playerRating.value,
+      pace: playerPAC.value,
+      shooting: playerSHO.value,
+      passing: playerPAS.value,
+      dribbling: playerDRI.value,
+      defending: playerDEF.value,
+      physical: playerPHY.value
+    };
+  }
+  
+  
+ 
 
   playerArray.push(player);
  console.log(playerArray);
