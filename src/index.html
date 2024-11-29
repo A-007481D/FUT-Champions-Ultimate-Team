@@ -162,12 +162,12 @@
     <div class="flex space-x-4 mb-4">
       <div class="flex-1">
         <label class="ml-1 text-sm font-semibold">Player Name</label>
-        <input id="taskTitle" class="rounded-lg px-3 py-2 w-full bg-gray-100 border border-gray-300" type="text"
+        <input id="playerName" class="rounded-lg px-3 py-2 w-full bg-gray-100 border border-gray-300" type="text"
           placeholder="Enter player name">
       </div>
       <div class="flex-1">
         <label class="ml-1 text-sm font-semibold">Position</label>
-        <select id="taskStatus" class="rounded-md px-3 py-2 w-full bg-gray-100 border border-gray-300">
+        <select id="playerPosition" class="rounded-md px-3 py-2 w-full bg-gray-100 border border-gray-300">
           <option value="">Select Position</option>
           <option value="GK">GK</option>
           <option value="CB">CB</option>
@@ -186,37 +186,37 @@
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
       <div>
         <label class="ml-1 text-sm font-semibold">Rating</label>
-        <input id="PlayerRating" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
+        <input id="playerRating" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
           type="number" placeholder="Rating">
       </div>
       <div>
         <label class="ml-1 text-sm font-semibold">PAC</label>
-        <input id="PAC" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
+        <input id="playerPAC" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
           type="number" placeholder="PAC">
       </div>
       <div>
         <label class="ml-1 text-sm font-semibold">SHO</label>
-        <input id="SHO" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
+        <input id="playerSHO" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
           type="number" placeholder="SHO">
       </div>
       <div>
         <label class="ml-1 text-sm font-semibold">PAS</label>
-        <input id="PAS" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
+        <input id="playerPAS" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
           type="number" placeholder="PAS">
       </div>
       <div>
         <label class="ml-1 text-sm font-semibold">DRI</label>
-        <input id="DRI" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
-          type="number" placeholder="DRI">
+        <input id="playerDRI" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
+          type="number" placeholder="DRI">  
       </div>
       <div>
         <label class="ml-1 text-sm font-semibold">DEF</label>
-        <input id="DEF" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
+        <input id="playerDEF" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
           type="number" placeholder="DEF">
       </div>
       <div>
         <label class="ml-1 text-sm font-semibold">PHY</label>
-        <input id="PHY" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
+        <input id="playerPHY" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm" 
           type="number" placeholder="PHY">
       </div>
     </div>
@@ -224,40 +224,33 @@
     <div class="flex space-x-4 mt-4">
       <div class="flex-1">
         <label class="ml-1 text-sm font-semibold">Nationality</label> <br>
-        <select id="ClubSelect" class="rounded-lg px-2 py-1 text-sm">
-          <option value="">Morocco</option>
-          <option value="">Spain</option>
-          <option value="">England</option>
-          <option value="">Argentina</option>
-          <option value="">France</option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
+        <select id="playerNationality" class="rounded-lg px-2 py-1 text-sm">
+          <option value="Morocco">Morocco</option>
+          <option value="Spain">Spain</option>
+          <option value="England">England</option>
+          <option value="Argentina">Argentina</option>
+          <option value="France">France</option>
         </select>
         
       </div>
       <div class="flex-1">
         <label class="ml-1 text-sm font-semibold">Club</label><br>
         <select id="ClubSelect" class="rounded-lg px-2 py-1 text-sm">
-        <option value="">Real Madrid</option>
-        <option value="">Valencia</option>
-        <option value="">Barcelona</option>
-        <option value="">In. Miami</option>
-        <option value="">AC Milan</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-      </select>
+          <option value="Real Madrid">Real Madrid</option>
+          <option value="Valencia">Valencia</option>
+          <option value="Barcelona">Barcelona</option>
+          <option value="Inter Miami">Inter Miami</option>
+          <option value="AC Milan">AC Milan</option>
+        </select>
+        
           
       </div>
     </div>
-    <button onclick="closeAddModal()" class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg">
+    <button id="add-player" onclick="closeAddModal()" class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg">
     Submit
     </button>
+    <button onclick="closeAddModal()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg">Close</button>
+
   </div>
 </div>
 
