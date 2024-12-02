@@ -440,6 +440,8 @@ let playerPOSITIONING = document.getElementById('player-POSITIONING');
 const playerStats = document.getElementById("playerstats");
 const GKStats = document.getElementById("GKstats");
 
+let clickedCard;
+
 
 playerPosition.addEventListener('change', function () {
   if (this.value === 'GK') {
@@ -486,7 +488,8 @@ function openPlayerModal(position) {
 
   modalTitle.textContent = `Choose a player for ${position}`;
   modal.style.display = "flex";
-  renderPlayerList(filteredPlayers)
+  // renderPlayerList(filteredPlayers)
+  clickedCard = document.getElementById(position);
 };
 
 function closeModal() {
@@ -568,6 +571,9 @@ function renderPlayerList(playerArray) {
 
   playerArray.forEach(player => {
     const playerCard = document.createElement("div");
+    playerCard.onclick = () => {
+      clickedCard.innerHTML = playerCard.innerHTML;
+    }
     playerCard.className = "player-card";
     playerCard.innerHTML = `
       <div class="relative w-[10rem] h-[13rem] bg-cover bg-center flex flex-col items-center justify-center text-white text-lg font-bold rounded-lg hover:scale-105 transition duration-200 cursor-pointer
