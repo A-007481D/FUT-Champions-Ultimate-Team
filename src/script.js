@@ -547,13 +547,17 @@ addPlayer.onclick = function () {
 document.querySelectorAll(".card-position").forEach((card) => {
   card.addEventListener("click", () => {
     const position = card.id;
-    filterPlayersBy(position);
+    filterPlayersBy(position, card.querySelector(".player-NAME"));
   });
 });
 
-function filterPlayersBy(position) {
+function filterPlayersBy(position, name) {
+  let nameText = "";
+  if (name != null) {
+    nameText = name.textContent;
+  }
   const filteredPlayers = playerArray.filter(
-    (player) => player.position === position
+    (player) => player.position === position && player.name !== nameText
   );
   renderPlayerList(filteredPlayers);
 }
