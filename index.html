@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>FUT | Build Your Team</title>
-  <!-- <link rel="icon" type="image/x-icon" href="/src/img/FUTLogo.png"> -->
+  <link rel="icon" type="image/x-icon" href="/src/img/FUTLogo.png">
 </head>
 
 <body class="bg-cover bg-no-repeat" style="background-image: url('./src/img/untitled.jpg');">
@@ -329,6 +329,138 @@
           Submit
         </button>
         <button onclick="closeAddModal()" class="mt-4 px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg">Cancel</button>
+
+      </div>
+    </div>
+
+    <!-- edit player modal -->
+    <div id="editPlayer-modal" class="fixed inset-0 rounded bg-black/50 flex items-center justify-center hidden z-50">
+      <div class="bg-[#3979e1] p-6 rounded-lg shadow-lg w-[90%] max-w-lg">
+        <h2 class="text-lg font-bold mb-4">Edit Player</h2>
+
+        <div class="flex space-x-4 mb-4">
+          
+          <div class="flex-1">
+            <label class="ml-1 text-sm font-semibold">Player Name</label>
+            <input id="playerName" class="rounded-lg px-3 py-2 w-full bg-gray-100 border border-gray-300" type="text"
+              placeholder="Enter player name">
+          </div>
+          <!-- <div class="flex-1">
+            <label class="ml-1 text-sm font-semibold">Position</label>
+            <select id="playerPosition" class="rounded-md px-3 py-2 w-full bg-gray-100 border border-gray-300">
+              <option value="">Select Position</option>
+              <option value="GK">GK</option>
+              <option value="LCB">LCB</option>
+              <option value="RCB">RCB</option>
+              <option value="LB">LB</option>
+              <option value="RB">RB</option>
+              <option value="CM">CM</option>
+              <option value="RM">RM</option>
+              <option value="LM">LM</option>
+              <option value="ST">ST</option>
+              <option value="RW">RW</option>
+              <option value="LW">LW</option>
+            </select>
+          </div> -->
+        </div>
+        
+        <div id="playerstats" class="grid grid-cols-2 sm:grid-cols-4 gap-4 hidden">
+          <div>
+            <label class="ml-1 text-sm font-semibold">Rating</label>
+            <input id="playerRating" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="Rating">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">PAC</label>
+            <input id="playerPAC" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="PAC">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">SHO</label>
+            <input id="playerSHO" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="SHO">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">PAS</label>
+            <input id="playerPAS" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="PAS">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">DRI</label>
+            <input id="playerDRI" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="DRI">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">DEF</label>
+            <input id="playerDEF" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="DEF">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">PHY</label>
+            <input id="playerPHY" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="PHY">
+          </div>
+        </div>
+
+
+        <div id="GKstats" class="grid grid-cols-2 sm:grid-cols-4 gap-4 hidden">
+
+          <div>
+            <label class="ml-1 text-sm font-semibold">Rating</label>
+            <input id="playerRating" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="Rating">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">DIV</label>
+            <input id="player-DIVING" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="DIV">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">HAN</label>
+            <input id="player-HANDLING" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="HAN">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">KICK</label>
+            <input id="player-KICKING" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="KICK">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">REF</label>
+            <input id="player-REFLEXES" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="REFLEXES">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">SPE</label>
+            <input id="player-SPEED" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="SPE">
+          </div>
+          <div>
+            <label class="ml-1 text-sm font-semibold">POS</label>
+            <input id="player-POSITIONING" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300 text-sm"
+              type="number" placeholder="POS">
+          </div>
+        </div>
+
+        <div class="flex space-x-4 mt-4">
+          
+          <div class="flex-1">
+            <label class="ml-1 text-sm font-semibold">Nationality</label>
+            <input id="playerNationality" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300" type="text" placeholder="Country code Eg: BR,MA...">
+          </div>
+        
+            <div class="flex-1">
+            <label class="ml-1 text-sm font-semibold">Club</label>
+            <input id="ClubLogo" class="rounded-lg px-2 py-1 w-full bg-gray-100 border border-gray-300" type="text" placeholder="Club code Eg: RMA,PSG...">
+          </div>
+            
+         
+          
+        </div>
+        <button id="addEdited-player" onclick="closeEditModal()" class="mt-4 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg">
+          Submit
+        </button>
+        <button onclick="closeEditModal()" class="mt-4 px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg">Cancel</button>
 
       </div>
     </div>
