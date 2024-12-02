@@ -6,11 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>FUT | Build Your Team</title>
+  <!-- <link rel="icon" type="image/x-icon" href="/src/img/FUTLogo.png"> -->
 </head>
 
 <body class="bg-cover bg-no-repeat" style="background-image: url('./src/img/untitled.jpg');">
+  <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center space-x-3">
+        <img src="/src/img/FUTLogo.png" class="h-10" alt="FUT Champions Logo">
+        <span class="self-center text-2xl font-semibold dark:text-white">FUT Champions</span>
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0">
+      <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 hidden sm:inline-block focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Sign in</button>
+      
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Squad Builder</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Players</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Marketplace</a>
+        </li>
+        <li>
+          <a href="https://github.com/A-007481D/FB-Clubs-API" class=" block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Get our API</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
 
-  <header>
+  <header class="mt-24">
     <h1 class="text-center text-3xl text-white py-4">Build your Ultimate Dream Team</h1>
   </header>
 
@@ -161,7 +199,7 @@
 
     <!-- Add player modal -->
     <div id="AddPlayer-modal" class="fixed inset-0 rounded bg-black/50 flex items-center justify-center hidden">
-      <div class="bg-green-200 p-6 rounded-lg shadow-lg w-[90%] max-w-lg">
+      <div class="bg-[#3979e1] p-6 rounded-lg shadow-lg w-[90%] max-w-lg">
         <h2 class="text-lg font-bold mb-4">Add a New Player</h2>
 
         <div class="flex space-x-4 mb-4">
@@ -287,10 +325,10 @@
          
           
         </div>
-        <button id="add-player" onclick="closeAddModal()" class="mt-4 px-4 py-2 bg-green-600 text-white rounded-lg">
+        <button id="add-player" onclick="closeAddModal()" class="mt-4 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg">
           Submit
         </button>
-        <button onclick="closeAddModal()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg">Close</button>
+        <button onclick="closeAddModal()" class="mt-4 px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg">Cancel</button>
 
       </div>
     </div>
@@ -307,6 +345,40 @@
     </div>
 
   </main>
+  <footer class="bg-[#111826] px-6 md:px-20 py-8 mt-5">
+    <div class="mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-gray-400 text-lg ">
+        <div class="flex  ">
+            <a href="">
+                <img src="/src/img/FUTLogo.png" class="h-24 w-full" alt="FUT Logo">
+            </a>
+        </div>
+        <div class=" md:mt-8 md:ml-2 pt-8 md:pt-0">
+            <h3 class="text-slate-50 font-bold text-[20px] md:text-[22px] mb-4">Best Squads</h3> <hr class="p-2 w-12">
+            <p class="text-white text-[20px] mb-4"><a href="#">Thunderstruck II</a></p>
+            <p class="text-white text-[18px]"><a href="#">Team Of The Week</a></p>
+        </div>
+        <div class="md:mt-8 pl-5 md:pl-0 md:ml-5">
+            <h3 class="text-slate-50 font-bold text-[20px] md:text-[22px] mb-4">QuickLinks</h3> <hr class="p-2 w-12">
+            <p class="text-white text-[20px] mb-4"><a href="">Marketplace</a></p>
+            <p class="text-white text-[20px] mb-4"><a href="">Squad Builder</a></p>
+        </div>
+        <div class=" md:mt-8 ">
+            <h3 class="text-slate-50 font-bold text-[20px] md:text-[22px] mb-4">Serivces</h3> <hr class="p-2 w-12">
+            <p class="text-white  mb-4"><a href="#">FUT Mobile</a></p>
+            <p class="text-white text-[20px]"><a href="#">SBC</a></p>
+        </div>
+    </div>
+    <div id="socials-icons" class="flex justify-center gap-6 mt-8">
+        <a href="#"><img src="/src/img/Facebook.png" alt="Facebook" class="h-6 w-6 md:h-12 md:w-12"></a>
+        <a href="#"><img src="/src/img/Instagram.png" alt="Instagram" class="h-6 w-6 md:h-12 md:w-12"></a>
+        <a href="#"><img src="/src/img/Twitch.png" alt="Twitert" class="h-6 w-6 md:h-12 md:w-12"></a>
+        <a href="#"><img src="/src/img/Discord.png" alt="Discord" class="h-6 w-6 md:h-12 md:w-12"></a>
+    </div>
+    <div class="flex justify-center mt-6">
+        <h3 class="text-white font-normal text-[13px] md:text-2xl text-center">© 2024 Codebenders. All rights
+            reserved | FUT Champions</h3>
+    </div>
+</footer>
 
 
 
