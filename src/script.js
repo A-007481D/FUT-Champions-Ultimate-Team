@@ -465,6 +465,18 @@ function openEditPM() {
   editModal.querySelector('#ClubLogo').value = player.club;
 
   editModal.querySelector('#addEdited-player').onclick = function () {
+    if (editModal.querySelector('#playerName').value == "") {
+      alert("Player Name is required.");
+      return;
+    }
+    if (editModal.querySelector('#playerNationality').value == "") {
+      alert("Player Nationality is required.");
+      return;
+    }
+    if (editModal.querySelector('#ClubLogo').value == "") {
+      alert("Player Club is required.");
+      return;
+    }
     for (let i = 0; i < playerArray.length; i++) {
       if (playerArray[i].name == player.name) {
         playerArray[i].name = editModal.querySelector('#playerName').value;
@@ -481,9 +493,8 @@ function openEditPM() {
     closeEditModal();
     // https://flagsapi.com/${country}/flat/64.png
     // https://raw.githubusercontent.com/A-007481D/FB-Clubs-API/refs/heads/main/teams/${club}.png
-  }
 }
-
+}
 function closeEditModal() {
   const modal = document.getElementById("editPlayer-modal");
   modal.style.display = "none";
@@ -561,6 +572,26 @@ addPlayer.onclick = function () {
   const photo = playerPhoto.value || "/src/img/default-player.png";
   const club = playerClub.value.toUpperCase();
 
+  if (!playerName.value) {
+    alert("Player Name is required.");
+    return;
+  }
+  if (!playerPosition.value) {
+    alert("Player Position is required.");
+    return;
+  }
+  if (!playerNationality.value) {
+    alert("Player Nationality is required.");
+    return;
+  }
+  if (!playerClub.value) {
+    alert("Player Club is required.");
+    return;
+  }
+  if (!playerRating.value) {
+    alert("Player Rating is required.");
+    return;
+  }
   let player;
   if (playerPosition.value === "GK") {
     player = {
@@ -633,9 +664,11 @@ function renderPlayerList(playerArray) {
   playerArray.forEach((player) => {
     const playerCard = document.createElement("div");
     playerCard.onclick = () => {
+      // alert('LLL');
       closeModal()
       clickedCard.innerHTML ="";
       clickedCard.appendChild(playerCard);
+      playerCard.onclick = null;
     };
     playerCard.className = "player-card";
     playerCard.innerHTML = `
